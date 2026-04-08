@@ -30,6 +30,7 @@ a{
     font-size:18px;
     font-weight:bold;
     transition:0.3s;
+    cursor: pointer; /* Utile car certains liens seront gérés par JS */
 }
 a:hover{
     background:#eaeaea;
@@ -44,20 +45,52 @@ a:hover{
 </header>
 
 <main>
-    <a href="lecon1_bonheur.html">Leçon 1 — Dépend-il de nous d’être heureux ?</a>
-    <a href="lecon2_devoir.html">Leçon 2 — Pourquoi dois-je faire mon devoir ?</a>
-    <a href="lecon3_Etat.html">Leçon 3 — L’État est-il un mal nécessaire ?</a>
-    <a href="lecon4_justice.html">Leçon 4 — Peut-on s’accorder sur des règles communes de justice ?</a>
-    <a href="lecon5_verite.html">Leçon 5 — À quoi bon rechercher la vérité ?</a>
-    <a href="lecon6_science_doute.html">Leçon 6 — Mettre en doute la science</a>
-    <a href="lecon7_conscience.html">Leçon 7 — Puis-je me connaître moi-même ?</a>
-    <a href="lecon8_liberté.html">Leçon 8 — La Liberté et le Libre Arbitre</a>
-    <a href="lecon9_technique.html">Leçon 9 — La Technique et la Nature</a>
+    <a href="lecon1_bonheur.html" class="lecon-link">Leçon 1 — Dépend-il de nous d’être heureux ?</a>
+    <a href="lecon2_devoir.html" class="lecon-link">Leçon 2 — Pourquoi dois-je faire mon devoir ?</a>
+    <a href="lecon3_Etat.html" class="lecon-link">Leçon 3 — L’État est-il un mal nécessaire ?</a>
+    <a href="lecon4_justice.html" class="lecon-link">Leçon 4 — Peut-on s’accorder sur des règles communes de justice ?</a>
+    <a href="lecon5_verite.html" class="lecon-link">Leçon 5 — À quoi bon rechercher la vérité ?</a>
+    <a href="lecon6_science_doute.html" class="lecon-link">Leçon 6 — Mettre en doute la science</a>
+    <a href="lecon7_conscience.html" class="lecon-link">Leçon 7 — Puis-je me connaître moi-même ?</a>
+    <a href="lecon8_liberté.html" class="lecon-link">Leçon 8 — La Liberté et le Libre Arbitre</a>
+    <a href="lecon9_technique.html" class="lecon-link">Leçon 9 — La Technique et la Nature</a>
+    
     <a style="translate: 0% 50px;" href="auteur.html">Tous les auteurs</a>
 </main>
+
+<script>
+    // Le mot de passe que tu souhaites définir
+    const MOT_DE_PASSE = "philo2026"; 
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const leconLinks = document.querySelectorAll('.lecon-link');
+
+        leconLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Empêche d'aller directement sur la page
+                const targetUrl = link.getAttribute('href');
+
+                // On vérifie si l'utilisateur s'est déjà connecté pendant cette session
+                if (sessionStorage.getItem('authentifie') === 'oui') {
+                    window.location.href = targetUrl;
+                    return;
+                }
+
+                // S'il n'est pas connecté, on lui demande le mot de passe
+                const saisie = prompt("🔒 Cette page est protégée. Veuillez entrer le mot de passe :");
+
+                if (saisie === MOT_DE_PASSE) {
+                    // Mot de passe correct : on enregistre l'accès et on redirige
+                    sessionStorage.setItem('authentifie', 'oui');
+                    window.location.href = targetUrl;
+                } else if (saisie !== null) {
+                    // Mot de passe incorrect
+                    alert("❌ Mot de passe incorrect.");
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
-
-
-
-
