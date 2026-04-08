@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>
+    // Vérifie si la personne a bien entré le mot de passe sur l'accueil
+    if (sessionStorage.getItem('authentifie') !== 'oui') {
+        alert("⛔ Accès refusé. Veuillez entrer le mot de passe sur la page d'accueil.");
+        window.location.replace('index.html'); // Renvoie de force vers l'accueil
+    }
+</script>
+<title>Leçon 5 – À quoi bon rechercher la vérité ?</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f7;
+    display:flex;
+}
+
+/* MENU */
+nav{
+    width:320px;
+    background:#1e1e2f;
+    color:white;
+    padding:25px;
+    position:fixed;
+    height:100vh;
+    overflow-y:auto;
+}
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    display:block;
+    margin:8px 0;
+}
+nav a:hover{color:white;}
+
+/* CONTENU */
+main{
+    margin-left:350px;
+    padding:40px;
+    max-width:1000px;
+    line-height:1.7;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+/* TITRES */
+.partie{
+    font-size:28px;
+    margin-top:60px;
+    color:#0b3c5d;
+    border-bottom:3px solid #0b3c5d;
+    padding-bottom:5px;
+}
+
+.sous{
+    font-size:21px;
+    margin:30px 0 10px 30px;
+    color:#3b3b98;
+}
+
+/* BLOCS */
+.box{
+    background:white;
+    padding:18px;
+    margin:15px 0 15px 60px;
+    border-radius:8px;
+}
+
+.def{border-left:6px solid #3498db;}
+.auteur{border-left:6px solid #9b59b6;}
+.exemple{border-left:6px solid #27ae60;}
+.bac{border-left:6px solid #e74c3c;background:#fff5f5;}
+
+.imp{
+    font-weight:bold;
+    text-decoration:underline;
+    color:#c0392b;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html"><strong>⬅ Accueil</strong></a>
+<a href="#probleme">Problématique</a>
+<a href="#I">I. Qu’est-ce que la vérité ?</a>
+<a href="#II">II. Qui possède la vérité ?</a>
+<a href="#III">III. Chercher la vérité pour libérer l’esprit</a>
+<a href="#IV">IV. La vérité est-elle inaccessible ?</a>
+<a href="#conclusion">Conclusion</a>
+</nav>
+
+<main>
+
+<h1>Leçon 5 : À quoi bon rechercher la vérité ?</h1>
+
+<!-- PROBLEMATIQUE -->
+
+<h2 id="probleme" class="partie">🔎 Problématique</h2>
+
+<div class="box bac">
+<ul>
+<li>Pourquoi cherchons-nous la vérité ?</li>
+</ul>
+
+<p class="imp">La vérité est-elle :</p>
+
+<ul>
+<li>un moyen pour obtenir autre chose (liberté, efficacité, pouvoir) ?</li>
+<li>ou une fin en soi, ayant une valeur propre qui justifie qu’on la recherche ?</li>
+</ul>
+</div>
+
+<!-- I -->
+
+<h2 id="I" class="partie">I. Qu’est-ce que la vérité ?</h2>
+
+<h3 class="sous">A. Vrai / Faux</h3>
+
+<div class="box def">
+<p class="imp">Définition courante</p>
+
+<p>Une vérité = une idée conforme à la réalité</p>
+
+<p>La vérité = adéquation entre la pensée et le réel</p>
+</div>
+
+<div class="box auteur">
+
+<p><strong>Spinoza – Pensées métaphysiques</strong></p>
+
+<p class="imp">👉 Le vrai :</p>
+
+<ul>
+<li>Raconte les faits tels qu’ils sont réellement</li>
+<li>Montre une chose telle qu’elle est en elle-même</li>
+</ul>
+
+<p>Métaphore : une chose est vraie quand son apparence correspond à sa nature profonde</p>
+
+</div>
+
+<div class="box exemple">
+
+<p class="imp">📌 Exemple</p>
+
+<p>De fausses chaussures sont bien des chaussures, mais pas réellement ce qu’elles prétendent être (pas la vraie marque).</p>
+
+</div>
+
+<div class="box def">
+
+<p class="imp">➡️ Conclusion</p>
+
+<p>La vérité n’est pas la réalité elle-même, mais un rapport entre une pensée et la réalité.</p>
+
+</div>
+
+<h3 class="sous">B. À quoi s’oppose la vérité ?</h3>
+
+<div class="box def">
+
+<p class="imp">🔻 Antonymes de la vérité</p>
+
+<ul>
+<li>Erreur : se tromper involontairement (ex : 2 + 2 = 3)</li>
+<li>Mensonge : tromper volontairement (ex : le Père Noël)</li>
+<li>Illusion : tromperie des sens (ex : illusions optiques)</li>
+</ul>
+
+</div>
+
+<div class="box def">
+
+<p class="imp">📌 Mise au point sémantique</p>
+
+<ul>
+<li>Dans le langage courant : vérité = conformité au réel</li>
+<li>En science ou en philosophie : vérité = connaissance reconnue comme juste, ayant une valeur universelle</li>
+</ul>
+
+</div>
+
+<!-- II -->
+
+<h2 id="II" class="partie">II. Qui possède la vérité ?</h2>
+
+<h3 class="sous">A. La vérité comme autorité</h3>
+
+<div class="box def">
+
+<p>👶 L’enfant interroge les adultes car :</p>
+
+<ul>
+<li>Il se sait ignorant</li>
+<li>Il suppose qu’ils détiennent la vérité</li>
+</ul>
+
+</div>
+
+<div class="box auteur">
+
+<p class="imp">Définition de l’autorité</p>
+
+<p>Relation dans laquelle une personne reconnue comme supérieure est librement acceptée.</p>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Alexandre Kojève – La notion d’autorité</strong></p>
+
+<p class="imp">👉 Il y a autorité seulement si :</p>
+
+<ul>
+<li>Celui qui obéit comprend pourquoi l’autre est supérieur</li>
+</ul>
+
+<p>➡️ Autorité et savoir sont donc liés.</p>
+
+</div>
+
+<h3 class="sous">B. « Chacun sa vérité » ?</h3>
+
+<div class="box auteur">
+
+<p><strong>Protagoras</strong></p>
+
+<p>📖 « L’homme est la mesure de toutes choses »</p>
+
+<ul>
+<li>Toute vérité dépend de l’expérience individuelle</li>
+<li>Pas de vérité universelle</li>
+</ul>
+
+<p class="imp">Doctrine relativiste</p>
+
+<p>Toutes les idées sont relatives.</p>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Platon – Théétète</strong></p>
+
+<p>Socrate interroge : « Qu’est-ce que la science ? »</p>
+
+<p>Réponse : « La science est la perception »</p>
+
+<p class="imp">❌ Réfutation du relativisme</p>
+
+<ul>
+<li>Impossible de distinguer le vrai du faux</li>
+<li>Contradiction logique</li>
+<li>La communication suppose des vérités communes</li>
+</ul>
+
+<p>➡️ Le relativisme rend la connaissance impossible.</p>
+
+</div>
+
+<!-- III -->
+
+<h2 id="III" class="partie">III. Chercher la vérité pour libérer l’esprit</h2>
+
+<h3 class="sous">A. Sortir de la caverne</h3>
+
+<div class="box auteur">
+
+<p><strong>Platon – La République</strong></p>
+
+<p class="imp">📖 Allégorie de la caverne</p>
+
+<ul>
+<li>Les prisonniers voient des ombres et les prennent pour la vérité</li>
+<li>L’éducation est une contrainte douloureuse mais libératrice</li>
+<li>Celui qui sort découvre la vraie réalité</li>
+</ul>
+
+<p class="imp">➡️ La vérité libère, mais elle est difficile à accepter.</p>
+
+</div>
+
+<div class="box def">
+
+<p class="imp">Quand le prisonnier revient :</p>
+
+<ul>
+<li>Il n’est pas cru</li>
+<li>La vérité dérange les illusions</li>
+</ul>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Platon – Phèdre</strong></p>
+
+<p>L’éloquence peut convaincre sans dire la vérité.</p>
+
+<p>Parler bien ≠ dire vrai.</p>
+
+</div>
+
+<div class="box def">
+
+<p class="imp">Deux mondes chez Platon</p>
+
+<ul>
+<li>Monde sensible : matériel, changeant</li>
+<li>Monde intelligible : idées éternelles</li>
+</ul>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Einstein</strong></p>
+
+<p>« La chose la plus incompréhensible du monde, c’est qu’il soit compréhensible »</p>
+
+<p>➡️ Le réel est intelligible.</p>
+
+</div>
+
+<h3 class="sous">B. Les fake news</h3>
+
+<div class="box def">
+
+<p>Les fausses informations peuvent venir :</p>
+
+<ul>
+<li>d’une erreur</li>
+<li>d’une intention de tromper</li>
+<li>d’une illusion</li>
+</ul>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Harry Frankfurt – On Bullshit</strong></p>
+
+<p class="imp">👉 Le bullshit n’est pas un mensonge</p>
+
+<ul>
+<li>Le menteur se soucie de la vérité</li>
+<li>Le bullshitter s’en fiche totalement</li>
+</ul>
+
+<p>➡️ Danger majeur pour la vérité.</p>
+
+</div>
+
+<!-- IV -->
+
+<h2 id="IV" class="partie">IV. La vérité est-elle inaccessible ?</h2>
+
+<h3 class="sous">A. Le scepticisme</h3>
+
+<div class="box def">
+
+<ul>
+<li>Ce que l’on croit vrai peut être une illusion</li>
+<li>Il existe plusieurs vérités scientifiques</li>
+<li>La vérité évolue</li>
+</ul>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Montaigne – Essais</strong></p>
+
+<ul>
+<li>Plus on apprend, plus on découvre son ignorance</li>
+<li>Le scepticisme mène à la tolérance</li>
+</ul>
+
+<p>📖 « Chacun appelle barbarie ce qui n’est pas de son usage »</p>
+
+</div>
+
+<h3 class="sous">B. La vérité objective : un idéal scientifique</h3>
+
+<div class="box def">
+
+<p class="imp">La science progresse :</p>
+
+<p>Une nouvelle théorie est meilleure, pas juste différente.</p>
+
+</div>
+
+<div class="box exemple">
+
+<p class="imp">📌 Exemple</p>
+
+<p>Géocentrisme → Héliocentrisme</p>
+
+<p>Galilée censuré pour avoir défendu une vérité scientifique.</p>
+
+</div>
+
+<div class="box auteur">
+
+<p><strong>Einstein & Infeld – L’évolution des idées en physique</strong></p>
+
+<ul>
+<li>Les scientifiques supposent une vérité objective</li>
+<li>Ils peuvent s’en approcher sans jamais être certains de l’avoir atteinte</li>
+</ul>
+
+</div>
+
+<div class="box def">
+
+<p>Newton contredit par Einstein, mais toujours utilisé car efficace.</p>
+
+<p class="imp">➡️ La science progresse par hypothèses, comparaisons et corrections.</p>
+
+</div>
+
+<!-- CONCLUSION -->
+
+<h2 id="conclusion" class="partie">🧾 Conclusion</h2>
+
+<div class="box bac">
+
+<ul>
+<li>La vérité a une valeur théorique : connaître</li>
+<li>Elle a aussi une valeur pratique : libérer de l’illusion</li>
+<li>La vérité ultime est un idéal inatteignable</li>
+</ul>
+
+<p class="imp">Mais la quête de vérité permet un progrès constant, scientifique et personnel.</p>
+
+</div>
+
+</main>
+</body>
+</html>

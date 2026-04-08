@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>
+    // Vérifie si la personne a bien entré le mot de passe sur l'accueil
+    if (sessionStorage.getItem('authentifie') !== 'oui') {
+        alert("⛔ Accès refusé. Veuillez entrer le mot de passe sur la page d'accueil.");
+        window.location.replace('index.html'); // Renvoie de force vers l'accueil
+    }
+</script>
+<title>Leçon 6 – Est-il contraire à la raison de mettre en doute la science ?</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f7;
+    display:flex;
+}
+
+/* MENU */
+nav{
+    width:320px;
+    background:#1e1e2f;
+    color:white;
+    padding:25px;
+    position:fixed;
+    height:100vh;
+    overflow-y:auto;
+}
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    display:block;
+    margin:8px 0;
+}
+nav a:hover{color:white;}
+
+/* CONTENU */
+main{
+    margin-left:350px;
+    padding:40px;
+    max-width:1000px;
+    line-height:1.7;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+/* TITRES */
+.partie{
+    font-size:28px;
+    margin-top:60px;
+    color:#0b3c5d;
+    border-bottom:3px solid #0b3c5d;
+    padding-bottom:5px;
+}
+
+.sous{
+    font-size:21px;
+    margin:30px 0 10px 30px;
+    color:#3b3b98;
+}
+
+/* BLOCS */
+.box{
+    background:white;
+    padding:18px;
+    margin:15px 0 15px 60px;
+    border-radius:8px;
+}
+
+.def{border-left:6px solid #3498db;}
+.auteur{border-left:6px solid #9b59b6;}
+.exemple{border-left:6px solid #27ae60;}
+.bac{border-left:6px solid #e74c3c;background:#fff5f5;}
+
+.imp{
+    font-weight:bold;
+    text-decoration:underline;
+    color:#c0392b;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html"><strong>⬅ Accueil</strong></a>
+<a href="#intro">Exemple introductif</a>
+<a href="#probleme">Problématique</a>
+<a href="#I">I. Qu’est-ce que la science ?</a>
+<a href="#II">II. Le rôle de l’expérience</a>
+<a href="#III">III. Science et autres discours</a>
+<a href="#conclusion">Conclusion</a>
+</nav>
+
+<main>
+
+<h1>Leçon 6 : Est-il contraire à la raison de mettre en doute la science ?</h1>
+
+<h2 id="intro" class="partie">🔎 Exemple introductif</h2>
+
+<div class="box def">
+<ul>
+<li>Les platistes remettent en cause des vérités scientifiques établies</li>
+</ul>
+
+<p class="imp">Mettre en doute = exercer :</p>
+
+<ul>
+<li>le droit à la recherche</li>
+<li>le raisonnement critique</li>
+</ul>
+
+<p>Mais douter peut aussi conduire au complotisme.</p>
+</div>
+
+<h2 id="probleme" class="partie">🔍 Problématique</h2>
+
+<div class="box bac">
+<ul>
+<li>Pourquoi accorde-t-on au discours scientifique une valeur et une autorité particulières ?</li>
+<li>Ces raisons sont-elles toujours légitimes ?</li>
+<li>Faut-il parfois mettre en doute la science, et est-ce rationnel ?</li>
+</ul>
+</div>
+
+<h2 id="I" class="partie">I. Qu’est-ce que la science ?</h2>
+
+<h3 class="sous">A. De quoi parle-t-on quand on parle de science ?</h3>
+
+<div class="box def">
+<p class="imp">Définir la science, c’est :</p>
+<ul>
+<li>Donner l’essence de ce qu’est la science</li>
+<li>La distinguer des autres formes de savoir</li>
+</ul>
+</div>
+
+<div class="box def">
+<p class="imp">Caractéristiques générales de la science :</p>
+<ul>
+<li>Elle utilise des méthodes spécifiques</li>
+<li>Elle a un aspect social (communauté scientifique)</li>
+<li>Son statut évolue dans l’histoire</li>
+<li>Elle repose sur l’expérimentation</li>
+</ul>
+</div>
+
+<div class="box exemple">
+<p class="imp">La science est-elle récente ?</p>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>Égypte antique : géométrie avancée</li>
+<li>Renaissance / Révolution scientifique :
+<ul>
+<li>Rupture avec le Moyen Âge</li>
+<li>Redéfinition de la science</li>
+<li>Accélération du progrès scientifique</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="box def">
+<p class="imp">Distinction science / non-science</p>
+<p>Exemple : alchimie</p>
+<ul>
+<li>Recherche de l’immortalité</li>
+<li>Objectif extérieur à la connaissance</li>
+</ul>
+<p>➡️ Est scientifique ce qui cherche uniquement à comprendre comment fonctionne le réel.</p>
+</div>
+
+<div class="box def">
+<p class="imp">Définitions de la science</p>
+
+<p><strong>1️⃣ Sens individuel</strong></p>
+<p>Somme des connaissances acquises par l’étude, la réflexion et l’expérience.</p>
+
+<p><strong>2️⃣ Sens collectif</strong></p>
+<p>Activité humaine visant un ensemble cohérent de connaissances.</p>
+
+<ul>
+<li>Ces connaissances obéissent à des lois</li>
+<li>Méthodes rationnelles et/ou expérimentales</li>
+</ul>
+
+<p>➡️ La science est un domaine particulier du savoir.</p>
+</div>
+
+<h3 class="sous">B. La science comme démarche rationnelle</h3>
+
+<div class="box auteur">
+<p><strong>Aristote – Seconds Analytiques</strong></p>
+
+<p class="imp">Définition de la science :</p>
+<ul>
+<li>Savoir ce qui est</li>
+<li>Savoir pourquoi c’est ainsi</li>
+<li>Connaître la cause nécessaire d’un phénomène</li>
+</ul>
+
+<p>Exemple : la foudre.</p>
+</div>
+
+<div class="box def">
+<p class="imp">Structure d’un raisonnement :</p>
+<ul>
+<li>Principe : point de départ</li>
+<li>Conséquence : idée dérivée</li>
+<li>Conclusion : point d’arrivée</li>
+</ul>
+</div>
+
+<div class="box auteur">
+<p><strong>Aristote – Premiers Analytiques</strong></p>
+<p>Étude des syllogismes.</p>
+</div>
+
+<div class="box exemple">
+<p class="imp">Exemple</p>
+<p>Théorème de Pythagore.</p>
+<p>Démonstration ⇒ vérité universelle.</p>
+</div>
+
+<div class="box bac">
+<p class="imp">Question-clé</p>
+<p>Peut-on atteindre une telle certitude dans l’étude de la nature ?</p>
+</div>
+
+<h2 id="II" class="partie">II. Le rôle de l’expérience dans la science</h2>
+
+<h3 class="sous">A. Pourquoi l’expérience est-elle nécessaire ?</h3>
+
+<div class="box auteur">
+<p><strong>David Hume – Enquête sur l’entendement humain</strong></p>
+
+<p class="imp">Deux types de connaissances :</p>
+
+<p><strong>1️⃣ Relations d’idées</strong></p>
+<ul>
+<li>Vérités logiques ou mathématiques</li>
+<li>Ex : 7 + 8 = 30 / 2</li>
+<li>Fondées sur le principe de non-contradiction</li>
+<li>Leur contraire est impossible</li>
+</ul>
+
+<p><strong>2️⃣ Faits</strong></p>
+<ul>
+<li>Événements du monde</li>
+<li>Ex : le soleil se lèvera demain</li>
+<li>Leur contraire est toujours possible</li>
+</ul>
+
+<p>➡️ Problème : comment être certain des faits futurs ?</p>
+</div>
+
+<div class="box def">
+<p class="imp">Hume, empiriste</p>
+<ul>
+<li>Toute connaissance vient de l’expérience</li>
+<li>L’expérience est toujours limitée</li>
+</ul>
+<p>➡️ La connaissance scientifique n’est jamais absolument certaine.</p>
+</div>
+
+<div class="box auteur">
+<p><strong>Bertrand Russell – Problèmes de philosophie</strong></p>
+<p>Nous n’avons qu’un nombre limité d’expériences.</p>
+<p>Impossible de tout observer ou vérifier.</p>
+</div>
+
+<h3 class="sous">B. Comment atteindre l’objectivité ?</h3>
+
+<div class="box def">
+<p class="imp">REPÈRES</p>
+<ul>
+<li><strong>Objectif :</strong> décrit un objet tel qu’il est en lui-même</li>
+<li><strong>Subjectif :</strong> dépend du point de vue du sujet</li>
+<li><strong>Intersubjectif :</strong> résultat de la collaboration de plusieurs subjectivités</li>
+</ul>
+</div>
+
+<div class="box auteur">
+<p><strong>Gaston Bachelard – La psychanalyse du feu</strong></p>
+<ul>
+<li>Se méfier des évidences</li>
+<li>L’objectivité est une construction</li>
+</ul>
+</div>
+
+<div class="box def">
+<p class="imp">Conséquences :</p>
+<ul>
+<li>La connaissance progresse</li>
+<li>Les nouvelles théories remplacent les anciennes</li>
+<li>Le progrès scientifique est non linéaire</li>
+</ul>
+
+<p>Le protocole scientifique permet :</p>
+<ul>
+<li>la vérification par les autres</li>
+<li>l’intersubjectivité</li>
+</ul>
+</div>
+
+<h2 id="III" class="partie">III. Le discours scientifique face aux autres discours</h2>
+
+<h3 class="sous">A. Science et récits préscientifiques</h3>
+
+<div class="box auteur">
+<p><strong>François Jacob – Le darwinisme aujourd’hui</strong></p>
+<p>Darwin : théorie de l’évolution par sélection naturelle.</p>
+</div>
+
+<div class="box def">
+<p class="imp">Points communs science / mythe :</p>
+<ul>
+<li>Répondent à des questions fondamentales</li>
+<li>Utilisent l’imagination</li>
+</ul>
+</div>
+
+<div class="box def">
+<p class="imp">Différences :</p>
+<ul>
+<li><strong>Mythe :</strong> définitif, demande l’adhésion</li>
+<li><strong>Science :</strong> provisoire, réfutable</li>
+</ul>
+</div>
+
+<div class="box auteur">
+<p><strong>Karl Popper – Conjectures et réfutations</strong></p>
+
+<p class="imp">Méthode scientifique :</p>
+
+<ul>
+<li>Observation</li>
+<li>Conjectures</li>
+<li>Mise à l’épreuve</li>
+<li>Vérification</li>
+<li>Réfutation</li>
+<li>Nouvelles conjectures</li>
+</ul>
+
+<p>➡️ Une théorie scientifique doit être réfutable.</p>
+</div>
+
+<div class="box def">
+<p class="imp">REPÈRE : croire / savoir</p>
+
+<p><strong>Croire</strong></p>
+<ul>
+<li>Affirmation subjective</li>
+<li>Nécessite des preuves</li>
+</ul>
+
+<p><strong>Savoir</strong></p>
+<ul>
+<li>Faits</li>
+<li>Raisons</li>
+<li>Expériences</li>
+</ul>
+</div>
+
+<h3 class="sous">B. Qu’est-il raisonnable de penser ?</h3>
+
+<div class="box auteur">
+<p>Œuvres critiques :</p>
+<ul>
+<li>Neil Postman – Se distraire à en mourir</li>
+<li>George Orwell – 1984</li>
+<li>Aldous Huxley – Le Meilleur des mondes</li>
+</ul>
+</div>
+
+<div class="box def">
+<p>Contrôle de la population par la science et la technique.</p>
+
+<p class="imp">Médias :</p>
+<ul>
+<li>Recherche du clash</li>
+<li>Faux débats scientifiques</li>
+</ul>
+</div>
+
+<div class="box def">
+<p class="imp">Les erreurs de la raison</p>
+
+<ul>
+<li>Biais de confirmation</li>
+<li>Biais de conformité</li>
+</ul>
+
+<p>➡️ Il peut être raisonnable de douter de la science quand elle est instrumentalisée.</p>
+</div>
+
+<div class="box def">
+<p class="imp">REPÈRE : la raison</p>
+
+<p><strong>Sens objectif :</strong></p>
+<p>Ce qui rend compte d’un fait ou d’un phénomène.</p>
+
+<p><strong>Sens subjectif :</strong></p>
+<ul>
+<li>Calcul</li>
+<li>Jugement</li>
+<li>Organisation du réel</li>
+</ul>
+</div>
+
+<h2 id="conclusion" class="partie">🧾 Conclusion</h2>
+
+<div class="box bac">
+
+<p>On attend de la science :</p>
+<ul>
+<li>des vérités</li>
+<li>des certitudes</li>
+</ul>
+
+<p>Mais ce qu’elle produit réellement :</p>
+<ul>
+<li>des théories</li>
+<li>des énoncés</li>
+<li>des prévisions fiables</li>
+</ul>
+
+<p class="imp">Mettre en doute la science :</p>
+
+<ul>
+<li>❌ n’est pas irrationnel</li>
+<li>✅ est nécessaire quand le doute est méthodique et rationnel</li>
+</ul>
+
+<p>Le vrai danger n’est pas le doute, mais le doute sans raison.</p>
+
+</div>
+
+</main>
+</body>
+</html>
