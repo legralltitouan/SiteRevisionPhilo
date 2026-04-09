@@ -6,6 +6,10 @@ Ce projet a été créé dans le but d'aider ma classe à préparer l'épreuve d
 
 ---
 
+https://legralltitouan.github.io/SiteRevisionPhilo/
+
+---
+
 ## 🎓 Pourquoi ce projet ?
 
 Les révisions du bac peuvent être denses. J'ai développé ce site pour offrir :
